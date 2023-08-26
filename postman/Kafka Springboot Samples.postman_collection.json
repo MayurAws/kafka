@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "142550e1-3480-4a8f-8f02-4a47a5c63cd1",
+		"name": "Kafka Springboot Samples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1147110"
+	},
+	"item": [
+		{
+			"name": "Send a Json message to Kafka",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Snow\",\r\n    \"branch\": \"Civil\",\r\n    \"sex\": \"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/kafka/send/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kafka",
+						"send",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send a simple message to kafka",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/kafka/send?message=First Message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kafka",
+						"send"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "First Message"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
